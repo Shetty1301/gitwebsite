@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <script src="index.js"></script>
-    <div style="display:flex flex-direction: vertical align-content:center">
-    <h1 align="center" style="font-weight:600;">Asli Raja Kaun???</h1>
-    <div style="width:full; display: flex; justify-content:center">
-        <div id="header" style="width:400px" >
-            <marquee behavior="slide" direction="right">
-              <img src="./messi.jfif" alt="messi" height=200px width=200px> 
-            </marquee>
-        </div>
-        <div id="header" style="width:400px">
-            <marquee behavior="slide" direction="left">
-              <img src="./ronaldo.jpg" alt="ronaldo" height=200px width=200px> 
-            </marquee>
+    <title>Rock-Paper-Scissors</title>
+    <link rel="icon" href="./rock.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <nav class="navbar"><div>ROCK ~ PAPER ~ SCISSORS</div></nav>
+
+    <div class="container">
+        <div class="game">
+            <div class="your-moves">
+                <img id="playerrock" class="playerbtn" onclick="clickRock()" src="./rock.png" alt="Rock">
+                <img id="playerpaper" class="playerbtn" onclick="clickPaper()" src="./paper.png" alt="Paper">
+                <img id="playerscissor" class="playerbtn" onclick="clickScissor()" src="./scissor.png" alt="Scissor">
+            </div>
+
+            <div class="scoreboard">
+                <div class="scorebox">
+                    <div class="score" id="yourscore">0</div>
+                    <div class="label">You</div>
+                </div>
+                <div class="scorebox">
+                    <div class="score" id="compscore">0</div>
+                    <div class="label">Computer</div>
+                </div>
+            </div>
+            
+            <div class="computer-moves">
+                <img id="comprock" class="compbtn" src="./rock.png" alt="Rock">
+                <img id="comppaper" class="compbtn" src="./paper.png" alt="Paper">
+                <img id="compscissor" class="compbtn" src="./scissor.png" alt="Scissor">
+            </div>
+            <div class="result">Pick one option</div>
         </div>
     </div>
-    </div>  
-  </body>
+
+<script src="script.js"></script>
+</body>
 </html>
